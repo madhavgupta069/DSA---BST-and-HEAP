@@ -1,0 +1,26 @@
+// In-order Successor
+
+Node* inorderSuccessor(Node* root, Node* x){
+    Node* succ=NULL;
+    while(root){
+        if(x->data < root->data){
+            succ=root;
+            root=root->left;
+        } else root=root->right;
+    }
+    return succ;
+}
+
+
+// In-order Predecessor
+
+Node* inorderPredecessor(Node* root, Node* x){
+    Node* pred=NULL;
+    while(root){
+        if(x->data > root->data){
+            pred=root;
+            root=root->right;
+        } else root=root->left;
+    }
+    return pred;
+}
