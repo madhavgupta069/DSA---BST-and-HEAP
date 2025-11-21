@@ -1,0 +1,12 @@
+int maxBST(Node* root){
+    while(root->right) root=root->right;
+    return root->data;
+}
+
+
+// 2(C) Minimum Element
+
+int minBST(Node* root){
+    while(root->left) root=root->left;
+    return root->data;
+}
